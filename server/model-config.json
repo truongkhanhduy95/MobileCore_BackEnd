@@ -38,6 +38,7 @@
     "options": {
       "remoting": {
         "sharedMethods": {
+          "*": false,
           "createNews": true,
           "findById": true,
           "find": true,
