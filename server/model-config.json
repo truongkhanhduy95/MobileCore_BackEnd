@@ -4,7 +4,9 @@
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
-      "./models"
+      "./src/models/user",
+      "./src/models/news",
+      "./src/models/category"
     ],
     "mixins": [
       "loopback/common/mixins",
@@ -14,7 +16,37 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
+  },
+  "user": {
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "edit": true,
+          "register":true,
+          "create":false
+        }
+      }
+    }
+  },
+  "news": {
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "createNews": true,
+          "findById": true,
+          "find": true,
+          "edit": true,
+          "deleteById": true
+        }
+      }
+    }
   },
   "AccessToken": {
     "dataSource": "db",
@@ -34,5 +66,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "category": {
+    "dataSource": "db",
+    "public": true
   }
 }
