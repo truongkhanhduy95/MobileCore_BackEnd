@@ -3,5 +3,11 @@
     "name": "db",
     "connector": "memory",
     "file": "db.json"
+  },
+  "testSource": {
+    "name": "testSource",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
   }
 }

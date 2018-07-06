@@ -26,8 +26,8 @@
       "remoting": {
         "sharedMethods": {
           "edit": true,
-          "register":true,
-          "create":false
+          "register": true,
+          "create": false
         }
       }
     }
